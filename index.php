@@ -1,7 +1,7 @@
 <?php
 $is_auth = rand(0, 1);
 
-$user_name = ''; // укажите здесь ваше имя
+$user_name = 'Егор'; // укажите здесь ваше имя
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -27,8 +27,24 @@ $user_name = ''; // укажите здесь ваше имя
         <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
 
         <nav class="user-menu">
+            <?php if ($is_auth == 1) { ?>
+                <div class="user-menu_image">
+                    <img src="img/user.jpg" width="40" height="40" alt="Пользователь">
+                </div>
+            <div class="user-menu__logged">
+                <p><?=$user_name?></p>
+            </div>
+            <?php } elseif ($is_auth == 0) { ?>
+            <ul class="user-menu__list">
+                <li class="user-menu__item">
+                    <a href="#">Регистрация</a>
+                </li>
+                <li class="user-menu__item">
+                    <a href="#">Вход</a>
+                </li>
+            </ul>
+            <?php } ?>
 
-        <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
 
         </nav>
     </div>
@@ -36,7 +52,7 @@ $user_name = ''; // укажите здесь ваше имя
 
 <main class="container">
     <section class="promo">
-        <h2 class="promo__title">Нужен стафф для катки?</h2>
+        <h2 class="promo__title">Нужен стафф для катки ?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
             <!--заполните этот список из массива категорий-->
