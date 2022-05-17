@@ -63,6 +63,15 @@ function priceFormat($price) {
     }
 }
 ?>
+<?php
+function lotTimer() {
+    $Ntime = strtotime('tomorrow');
+    $time1 = time();
+    $dieTimer = $Ntime - $time1;
+    return gmdate('H:i',$dieTimer);
+
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -147,7 +156,7 @@ function priceFormat($price) {
                             <span class="lot__cost"><?=priceFormat($lot['price'])?></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=lotTimer()?>
                         </div>
                     </div>
                 </div>
