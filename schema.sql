@@ -48,6 +48,12 @@ CREATE TABLE `category` (
   `name_category` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Добавление столбца для связи с img в promo_list 23.05.2022 15:22
+--
+ALTER TABLE `category` ADD `eng_name` VARCHAR(100) NOT NULL AFTER `name_category`;
+
+ALTER TABLE `category` CHANGE `eng_name` `eng_name` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL;
 -- --------------------------------------------------------
 
 --

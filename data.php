@@ -2,7 +2,7 @@
 
     $is_auth = rand(0, 1);
     $user_name = 'Егор'; // укажите здесь ваше имя
-
+/*
     $arrayCategories = [
         [
         'category'=>'Доски и лыжи',
@@ -72,4 +72,4 @@
             'img' => 'img/lot-6.jpg'
         ]
     ];
-
+*/

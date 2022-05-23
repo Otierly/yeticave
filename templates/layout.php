@@ -57,7 +57,7 @@
             foreach ($arrayCategories as $category) {
             ?>
             <li class="nav__item">
-                <a href="pages/all-lots.html"><?=$category['category'] ?></a>
+                <a href="pages/all-lots.html"><?=$category['name_category'] ?></a>
             </li>
             <?php } ?>
         </ul>
